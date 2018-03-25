@@ -1,0 +1,15 @@
+<h1> this is the index page </h1>
+<%=link_to "create new article", new_article_path %>
+<table>
+  <th>title</th>
+  <th>description</th>
+<%@articles.each do |f| %>
+<tr>
+  <td><%= f.title %></td>
+  <td><%= f.description%></td>
+  <td><%=link_to "edit", edit_article_path(f) %></td>
+  <td><%=link_to "show", article_path(f) %></td>
+  <!--<td><%=link_to "delete", new_article_path %></td> -->
+</tr>
+<% end %>
+</table>
