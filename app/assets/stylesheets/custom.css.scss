@@ -1,4 +1,4 @@
-$navbar-default-bg: #08088A;
+$navbar-default-bg: #89d4e2;
 
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
@@ -15,7 +15,7 @@ $navbar-default-bg: #08088A;
 }
 
 #logo:hover{
-  color: #eae;
+  color: #aeeef9;
 
 }
 
@@ -25,7 +25,7 @@ $navbar-default-bg: #08088A;
 
 .jumbotron{
   background-image: asset-url('homebg.png');
-  background-size: cover;
+  background-size:cover;
   height: 550px;
 }
 
@@ -44,6 +44,30 @@ font-weight: bolder;
 
 }
 
+.description{
+  margin-top: 0;
+}
+
+.article-action{
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+.article-title{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-body{
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.article-actions{
+  float: right;
+  padding-bottom: 2px;
+}
+
 .footer{
   margin-top: 45px;
   padding-top: 5px;
@@ -51,6 +75,10 @@ font-weight: bolder;
   border-top-color: #eaeaea;
   border-top-style: solid;
   color: #777;
+}
+
+.navbar-nav li{
+  color: blue;
 }
 
 footer a:hover{

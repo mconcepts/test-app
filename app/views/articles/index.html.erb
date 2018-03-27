@@ -1,15 +1,23 @@
-<h1> this is the index page </h1>
-<%=link_to "create new article", new_article_path %>
-<table>
-  <th>title</th>
-  <th>description</th>
+<h1 align="center"> All articles </h1>
+
 <%@articles.each do |f| %>
-<tr>
-  <td><%= f.title %></td>
-  <td><%= f.description%></td>
-  <td><%=link_to "edit", edit_article_path(f) %></td>
-  <td><%=link_to "show", article_path(f) %></td>
-  <td><%=link_to "delete", article_path(f), method: :delete , data:{confirm: "Are u sure ?"} %></td>
-</tr>
+<div class ="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <div class="well well-lg">
+      <div class="article-title">
+   <%=link_to f.title ,article_path(f)%>
+      </div>
+      <div class="article-body">
+       <%= truncate(f.description,length: 100)%>
+      </div>
+      <div class="article-actions ">
+      <%=link_to "Delete", article_path(f),method: :delete,
+            data: {confirm: "Are you sure?"},
+            class: "btn btn-xs btn-danger"%>
+      <%=link_to "Edit", edit_article_path(f),
+                          class: "btn btn-xs btn-primary"%>
+    </div>
+    </div>
+  </div>
+  </div>
 <% end %>
-</table>
